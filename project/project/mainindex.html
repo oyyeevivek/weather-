@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Weather Website</title>
+   <style>
+     body {
+       font-family: Arial, sans-serif;
+       background: #e0f7fa;
+       margin: 0;
+       padding: 0;
+     }
+     header {
+       background: #00796b;
+       color: white;
+       padding: 1rem;
+       text-align: center;
+     }
+     nav {
+       display: flex;
+       justify-content: center;
+       background: #004d40;
+     }
+     nav a {
+       color: white;
+       padding: 1rem;
+       text-decoration: none;
+       margin: 0 0.5rem;
+     }
+     nav a:hover {
+       background: #00695c;
+     }
+     .page {
+       display: none;
+       padding: 2rem;
+     }
+     .page.active {
+       display: block;
+     }
+   </style>
+ </head>
+ <body>
+   <header>
+     <h1>Weather Forecast</h1>
+   </header>
+   <nav>
+     <a href="homepage.html" onclick="showPage('home')">Home</a>
+     <a href="today.html" onclick="showPage('today')">Today</a>
+     <a href="Screenshot 2025-04-16 115805.png" onclick="showPage('week')">This Week</a>
+     
+     <a href="Screenshot 2025-04-16 112454.png" onclick="showPage('maps')">Maps</a>
+     <a href="https://thewire.in/environment/deaths-destruction-india-climate-report-2024-grim-statistics" onclick="showPage('alerts')">Alerts</a>
+     <a href="about.html" onclick="showPage('about')">About</a>
+     
+   </nav>
+   
+   <div id="home" class="page active">
+     <h1 style="text-align: center;">🌦️ Introduction to Weather Forecasting</h1>
+     <p style="font-style: italic;">Weather forecasting is the scientific process of predicting the state of the atmosphere at a specific location and time in the future. It plays a vital role in modern society, influencing daily decisions ranging from what we wear to how we travel, and even how farmers manage their crops. By analyzing various atmospheric conditions—such as temperature, humidity, wind speed, cloud formation, and pressure—meteorologists can estimate how the weather will change over time.
+         <br>
+ 
+         Forecasting is achieved using a combination of ground-based observations, satellite data, weather balloons, radar systems, and sophisticated computer models. These models simulate the behavior of the atmosphere using mathematical equations and are run on powerful computers to generate short- and long-term predictions. <br>
+         
+     --> There are several types of forecasts including: <br>
+         
+         * Nowcasting (very short term) <br>
+         
+         * Short-range (1 to 3 days) <br>
+         
+         * Medium-range (3 to 10 days) <br>
+         
+         * Long-range (weeks or seasonal forecasts). <br>
+         
+         Weather forecasting is essential not only for daily convenience but also for critical sectors such as agriculture, aviation, shipping, disaster management, and public safety. Early warnings about storms, heatwaves, heavy rainfall, or extreme cold can help save lives and reduce damage to property. <br>
+         
+         With the advancement of technology, weather forecasting has become more accurate and accessible. Today, people can get real-time forecasts through mobile apps, websites, and smart devices, making it easier than ever to stay informed and prepared. <br>
+         
+         In essence, weather forecasting combines science, technology, and data analysis to help individuals and communities plan better and stay safe—no matter what the skies may bring.
+         
+         </p>
+   </div>
+   <div id="today" class="page">
+     <h2>Today's Weather</h2>
+     <p>Sunny, high of 25°C, low of 15°C.</p>
+   </div>
+   <div id="week" class="page">
+     <h2>This Week's Forecast</h2>
+     <p>Overview of weather for the week.</p>
+   </div>
+   <div id="radar" class="page">
+     <h2>Weather Radar</h2>
+     <p>Radar map showing precipitation.</p>
+   </div>
+   <div id="maps" class="page">
+     <h2>Weather Maps</h2>
+     <p>Interactive weather maps of your region.</p>
+   </div>
+   <div id="alerts" class="page">
+     <h2>Weather Alerts</h2>
+     <p>Stay informed about severe weather events.</p>
+   </div>
+   <div id="about" class="page">
+     <h2>About Us</h2>
+     <p>We provide accurate and timely weather forecasts.</p>
+   </div>
+   <div id="contact" class="page">
+     <h2>Contact</h2>
+     <p>Email us at weather@example.com</p>
+   </div>
+ 
+   <script>
+     function showPage(id) {
+       const pages = document.querySelectorAll('.page');
+       pages.forEach(page => page.classList.remove('active'));
+       document.getElementById(id).classList.add('active');
+     }
+   </script>
+ </body>
+ </html>
